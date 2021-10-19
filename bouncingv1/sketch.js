@@ -1,3 +1,7 @@
+//Code based on code provided in class and modified by Amelia T to create
+//visuals and alter the way the sensors influence the sound file
+
+
 let song;
 let serial;
 let latestData = "waiting for data";  // you'll use this to write incoming data to the canvas
@@ -111,19 +115,22 @@ function gotRawData(thedata) {
   println("gotRawData" + thedata);
 }
 
+//modifications
 function draw(){
 
   colorMode(HSB);
 
+  //allows you to change the volume with the potentiometer
   background(200,50, 100);
   outputVolume(diameter2/100);
 
 
-  
+  //created an ellipse that moves and bounces based on potentiometer and light sensor input
   noStroke();
   ellipse(diameter1, diameter2*4, 20, 20);
 
 
+  //allows you to stop the song by pressed the sensor board button
   song.play();
   if(diameter0 == 1){
   song.stop();
