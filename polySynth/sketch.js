@@ -3,6 +3,10 @@ August 2019 - Doug Whitton
 play 3 analog sensors that output sound and circle graphic
 The Arduino file that's running is "threeSensorExample"
 */
+/*
+Modified by Amelia Tziougras to include a polySynth that is controllable by 
+the potentiometer and light sensor
+*/
 
 let polySynth;
 
@@ -146,9 +150,11 @@ function gotRawData(thedata) {
 function playSynth() {
   userStartAudio();
 
+
   let vel = map(diameter2, 0, 100, 0, 1);
   let time = 0;
   let dur = 2;
+  //map the potentiometer value to allow us to switch between notes
   let slider = map(diameter1, 0, 100, 1,2);
 
   if(slider == 1){
