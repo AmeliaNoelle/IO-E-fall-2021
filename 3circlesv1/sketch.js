@@ -4,6 +4,10 @@ play 3 analog sensors that output sound and circle graphic
 The Arduino file that's running is "threeSensorExample"
 */
 
+/*
+Modified by Amelia Tziougras to try a Sin wave oscillator and dynamic fill value on one ellipse
+*/
+
 let osc;
 let playing = false;
 let serial;
@@ -165,6 +169,8 @@ function draw() {
   fill(0,255,0);
   ellipse(200, 100, diameter1, diameter1);
   ellipseMode(RADIUS);
+  
+  //modified original here to make a dynamic fill value
   fill(diameter0*100,diameter1,diameter2*2);
   ellipse(300, 100, diameter2, diameter2);
     
