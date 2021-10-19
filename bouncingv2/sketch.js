@@ -1,3 +1,7 @@
+//Code based on code provided in class and modified by me to create
+//visuals and alter the way the sensors influence the sound file
+
+
 let song;
 let serial;
 let latestData = "waiting for data";  // you'll use this to write incoming data to the canvas
@@ -111,6 +115,8 @@ function gotRawData(thedata) {
   println("gotRawData" + thedata);
 }
 
+//modified draw function to allow sensor input to change volume,
+//stop and start song, and create and modify a series of circles
 function draw(){
 
   colorMode(HSB);
