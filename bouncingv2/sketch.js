@@ -1,4 +1,4 @@
-//Code based on code provided in class and modified by me to create
+//Code based on code provided in class and modified by Amelia T to create
 //visuals and alter the way the sensors influence the sound file
 
 
