@@ -4,6 +4,11 @@ play 3 analog sensors that output sound and circle graphic
 The Arduino file that's running is "threeSensorExample"
 */
 
+/*
+Modified by Amelia Tziougras to try a square oscillation and a single ellipse that moves based on
+potentiometer input
+*/
+
 let osc;
 let playing = false;
 let serial;
