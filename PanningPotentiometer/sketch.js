@@ -1,3 +1,7 @@
+//Code modified from in class example Week6 - Load Sound by Amelia Tziougras
+//This version features panning from ear to ear controlled by a potentiometer
+//as well as button controlled stop and a dynamic ellipse
+
 let song;
 let serial;
 let latestData = "waiting for data";  // you'll use this to write incoming data to the canvas
@@ -125,11 +129,13 @@ function draw(){
   outputVolume(diameter2/100);
 
 
+  //creates a dynamic ellipse based on poteniometer and light sensor values
   ellipse(diameter1, diameter2*4, 20, 20);
 
-let panning = map(diameter1, 0., 100, -1.0, 1.0);
-song.pan(panning);
-print(panning);
+  //pans the song based on the potentiometer value
+  let panning = map(diameter1, 0., 100, -1.0, 1.0);
+  song.pan(panning);
+  print(panning);
   
   if(diameter0 == 1){
   song.stop();
